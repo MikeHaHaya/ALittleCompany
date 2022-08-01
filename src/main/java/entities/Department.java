@@ -1,4 +1,6 @@
 package entities;
 
-public class Department {
+public enum Department {
+
+    SALES, FINANCE, ADMINISTRATION, ENGINEERING, MARKETING
 }

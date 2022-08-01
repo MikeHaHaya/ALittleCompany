@@ -1,5 +1,7 @@
 package entities;
 
+import exceptions.PersonException;
+
 public class Person {
 
     String name;
@@ -20,8 +22,10 @@ public class Person {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws PersonException {
         if (age >= 20 && age <= 60)
             this.age = age;
+        else
+            throw new PersonException("Illegal age, age must be between 20 to 60.");
     }
 }
