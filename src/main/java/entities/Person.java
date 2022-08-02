@@ -4,8 +4,8 @@ import exceptions.PersonException;
 
 public class Person {
 
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     public Person() {
     }
@@ -22,6 +22,7 @@ public class Person {
         return age;
     }
 
+    // TODO -- Separate business logic from entity
     public void setAge(int age) throws PersonException {
         if (age >= 20 && age <= 60)
             this.age = age;

@@ -4,8 +4,8 @@ import exceptions.SalaryException;
 
 public class Salary {
 
-    double amount;
-    int yearlyBonus;
+    private double amount;
+    private int yearlyBonus;
 
     public Salary() {
     }
@@ -14,6 +14,7 @@ public class Salary {
         return amount;
     }
 
+    // TODO -- Separate business logic from entity
     public void setAmount(double amount) throws SalaryException {
         if (amount >= 1000 && amount <= 50000)
             this.amount = amount;
@@ -25,6 +26,7 @@ public class Salary {
         return yearlyBonus;
     }
 
+    // TODO -- Separate business logic from entity
     public void setYearlyBonus(int yearlyBonus) throws SalaryException {
         if (yearlyBonus >= 0 && yearlyBonus <= 10000)
             this.yearlyBonus = yearlyBonus;

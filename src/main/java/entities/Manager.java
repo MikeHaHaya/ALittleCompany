@@ -8,6 +8,7 @@ public class Manager extends Employee {
     public Manager() {
     }
 
+    // TODO -- Separate business logic from entity
     @Override
     public void setSalary(Salary salary) throws EmployeeException {
         if (salary.getAmount() >= 25000)
